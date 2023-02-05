@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'HelveticaNeue';
+}
+
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('HelveticaNeue.ttc');
+}
+/* Welcome Page */
+header{
+    margin: 10px 15px;
+}
+
+#title-1{
+color: orangered;
+padding-bottom: 10px;
+
+}
+.first-page{
+    background-color: bisque;
+}
+.cv {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -100px;
+}
+
+.black-bar{
+    
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 10px 7rem;
+    color: aliceblue;
+    background-color: black;
+}
+
+.black-bar:hover{
+    cursor:pointer ;
+}
+
+/* Second Page */
