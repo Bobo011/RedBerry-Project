@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>My Resume</title>
+    <link rel="stylesheet" type="text/css" href="styles2.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- //მარცხენა ნაწილი -->
+      <div class="half">
+        <div class="header">
+          <p>პირადი ინფო</p>
+          <p>1/3</p>
+        </div>
+        <form>
+          <div class="field-1">
+          <div>
+            <label for="name">სახელი</label>
+            <input type="text" id="name" name="name" required minlength="2" pattern="[ა-ჰ]+" placeholder="ანზორ">
+          </div>
+          <div>
+            <label for="surname">გვარი</label>
+            <input type="text" id="surname" name="surname" required minlength="2" pattern="[ა-ჰ]+" placeholder="მუმლაძე">
+          </div>
+        </div>
+          <div id="image-upload">
+            <label for="image">პირადი ფოტოს ატვირთვა</label>
+            <input  type="file" id="image" name="image" required>
+          </div>
+          <div>
+            <label for="aboutMe">ჩემს შესახებ(არასავალდებულო)</label>
+            <textarea id="aboutMe" name="aboutMe" placeholder="ზოგადი ინფო შენ შესახებ"></textarea>
+          </div>
+          <div>
+            <label for="email">ელ.ფოსტა</label>
+            <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@redberry\.ge"placeholder="anzor123@redberry.ge">
+          </div>
+          <div>
+            <label for="phoneNumber">მობილურის ნომერი</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" required pattern="(\+995\d{9})"placeholder="+995 551 12 34">
+          </div>
+          <div>
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+        
+      </div>
+      <!-- მარჯვენა ნაწილი -->
+      <div class="half"></div>
+    </div>
+  </body>
+</html>

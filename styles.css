@@ -1,7 +1,8 @@
 * {
     margin: 0;
-    padding: 0;
+    padding:0 10px;
     font-family: 'HelveticaNeue';
+    background-color: rgb(225, 230, 230);
 }
 
 @font-face {
@@ -10,7 +11,7 @@
 }
 /* Welcome Page */
 header{
-    margin: 10px 15px;
+    margin: 10px;
 }
 
 #title-1{
@@ -43,3 +44,26 @@ padding-bottom: 10px;
 }
 
 /* Second Page */
+.top-header{
+
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+#form-1{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.label{
+    font-weight: bold;
+
+}
+
+.input{
+    margin-top: 8px;
+    padding: 8px;
+    background-color: white;
+    border: solid ;
+}
