@@ -158,3 +158,9 @@ input[type="submit"] {
   margin-left: 21px;
 
 }
+/* ატვირთული ნახატი */
+#output-image{
+border-radius: 50%;
+float: right;
+
+}
