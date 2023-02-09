@@ -47,13 +47,17 @@
             <p class="small">უნდა აკმაყოფილებდეს ქართული მობილური ნომრის ფორმატს</p>
           </div>
           <div id="next">
-            <input type="submit" value="შემდეგი">
+            <input type="submit" value="შემდეგი" onclick="displayData()">
           </div>
         </form>
         
       </div>
       <!-- მარჯვენა ნაწილი -->
-      <div class="half"></div>
+      <div class="half">
+        <div id="display" style=" padding: 10px;"></div>
+        <img id="output-image">
+      </div>
     </div>
+    <script src="script1.js"></script>
   </body>
 </html>
