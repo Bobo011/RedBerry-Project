@@ -45,3 +45,28 @@ addAnotherButton.addEventListener("click", function() {
   const formClone = experienceForm.cloneNode(true);
   formSection.appendChild(formClone);
 });
+
+
+experienceForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  const experience = {
+    position: position.value,
+    employer: employer.value,
+    startDate: startDate.value,
+    graduationDate: graduationDate.value,
+    description: description.value
+  };
+  
+  localStorage.setItem("experience", JSON.stringify(experience));
+});
+
+
+const storedExperience = localStorage.getItem("experience");
+const experience = storedExperience ? JSON.parse(storedExperience) : {};
+
+previewPosition.textContent = experience.position || "";
+previewEmployer.textContent = experience.employer || "";
+previewStartDate.textContent = formatDate(experience.startDate) || "";
+previewGraduationDate.textContent = formatDate(experience.graduationDate) || "";
+previewDescription.textContent = experience.description || "";

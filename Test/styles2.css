@@ -163,12 +163,28 @@ input[type="submit"] {
 #output-image {
 
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
 
 }
 
-#image-position{
+.display-container {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  margin-top: 50px;
+}
+
+.input-data {
+  width: 40%;
+  text-align: left;
+  padding-right: 20px;
+}
+
+/* ატვირთული ტექსტი */
+#name-surname{
+  color: rgb(239, 139, 39);
+  font-weight: bold;
+  font-size: 25px;
 }
