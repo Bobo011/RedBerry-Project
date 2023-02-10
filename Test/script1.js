@@ -37,3 +37,11 @@ if (backButton) {
 startButton.addEventListener("click", function() {
   // code to navigate to the start page
 });
+
+const addAnotherButton = document.getElementById("add-another");
+const formSection = document.querySelector(".form-section");
+
+addAnotherButton.addEventListener("click", function() {
+  const formClone = experienceForm.cloneNode(true);
+  formSection.appendChild(formClone);
+});
