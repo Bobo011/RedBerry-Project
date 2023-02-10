@@ -25,7 +25,7 @@
   height: 100%;
   border-right: 1px solid black;
   padding: 6px 60px;
-  
+
 }
 
 .header {
@@ -158,9 +158,17 @@ input[type="submit"] {
   margin-left: 21px;
 
 }
-/* ატვირთული ნახატი */
-#output-image{
-border-radius: 50%;
-float: right;
 
+/* ატვირთული ნახატი */
+#output-image {
+
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+
+}
+
+#image-position{
+  display: flex;
+  justify-content: flex-end;
 }

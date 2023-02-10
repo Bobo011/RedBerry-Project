@@ -4,13 +4,54 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles-Test.css">
   <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="styles-Test.css" />
 </head>
 <body>
-  <input type="file" id="input-field">
-<img id="output-image">
-
+  <div class="header">
+    <p id="header-start">პირადი ინფო</p>
+    <p id="page-count">1/3</p>
+  </div>
+  <hr/>
+  <div class="page">
+    <div class="form-section">
+      <form id="experience-form">
+        <div class="form-group">
+          <label for="position">Position:</label>
+          <input type="text" id="position" name="position" required minlength="2">
+        </div>
+        <div class="form-group">
+          <label for="employer">Employer:</label>
+          <input type="text" id="employer" name="employer" required minlength="2">
+        </div>
+        <div class="form-group">
+          <label for="start-date">Start Date:</label>
+          <input type="date" id="start-date" name="start-date" required>
+        </div>
+        <div class="form-group">
+          <label for="graduation-date">Graduation Date:</label>
+          <input type="date" id="graduation-date" name="graduation-date" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea id="description" name="description" required></textarea>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="preview-section">
+      <h3>Preview:</h3>
+      <p><strong>Position:</strong> <span id="previewPosition"></span></p>
+      <p><strong>Employer:</strong> <span id="previewEmployer"></span></p>
+      <p><strong>Start Date:</strong> <span id="previewStartDate"></span></p>
+      <p><strong>Graduation Date:</strong> <span id="previewGraduationDate"></span></p>
+      <p><strong>Description:</strong> <span id="previewDescription"></span></p>
+    </div>
+  </div>
+  
+  <button id="back-button">Back</button>
+  <button id="start-button">&lt; Start</button>
+  
   <script src="script1.js"></script>
 </body>
 </html>

@@ -1,51 +1,39 @@
-function displayData() {
-  var name = document.getElementById("name").value;
-  var surname = document.getElementById("surname").value;
-  var aboutMe = document.getElementById("aboutMe").value;
-  var email = document.getElementById("email").value;
-  var phoneNumber = document.getElementById("phoneNumber").value;
+const experienceForm = document.getElementById("experience-form");
+const position = document.getElementById("position");
+const employer = document.getElementById("employer");
+const startDate = document.getElementById("start-date");
+const graduationDate = document.getElementById("graduation-date");
+const description = document.getElementById("description");
+const backButton = document.getElementById("back-button");
+const startButton = document.getElementById("start-button");
+const previewPosition = document.getElementById("previewPosition");
+const previewEmployer = document.getElementById("previewEmployer");
+const previewStartDate = document.getElementById("previewStartDate");
+const previewGraduationDate = document.getElementById("previewGraduationDate");
+const previewDescription = document.getElementById("previewDescription");
 
-  localStorage.setItem("name", name);
-  localStorage.setItem("surname", surname);
-  localStorage.setItem("aboutMe", aboutMe);
-  localStorage.setItem("email", email);
-  localStorage.setItem("phoneNumber", phoneNumber);
-
-  document.getElementById("display").innerHTML =
-    `${name} ${surname}<br><br>
-      
-      ${email}<br>
-      ${phoneNumber}<br><br>
-      ჩემს შესახებ <br> <br>
-      
-      ${aboutMe}`;
-}
-
-const inputField = document.getElementById("image");
-const outputImage = document.getElementById("output-image");
-
-inputField.addEventListener("change", function() {
-  const file = inputField.files[0];
-
-  if (!file) {
-    return;
-  }
-
-  const reader = new FileReader();
-  reader.readAsDataURL(file);
-
-  reader.onload = function() {
-    outputImage.src = reader.result;
-    localStorage.setItem("image", reader.result);
-  };
+experienceForm.addEventListener("input", function() {
+  previewPosition.textContent = position.value;
+  previewEmployer.textContent = employer.value;
+  previewStartDate.textContent = formatDate(startDate.value);
+  previewGraduationDate.textContent = formatDate(graduationDate.value);
+  previewDescription.textContent = description.value;
+  
 });
 
-// Get the data from local storage and populate the fields when the page loads
-window.onload = function() {
-  document.getElementById("name").value = localStorage.getItem("name");
-  document.getElementById("surname").value = localStorage.getItem("surname");
-  document.getElementById("aboutMe").value = localStorage.getItem("aboutMe");
-  document.getElementById("email").value = localStorage.getItem("email");
-  document.getElementById("phoneNumber").value = localStorage.getItem("phoneNumber");
-  document.getElementById("output-image").src = localStorage.getItem("image");
-};
+function formatDate(date) {
+  const dateObject = new Date(date);
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return dateObject.toLocaleDateString("en-US", options);
+}
+
+
+
+if (backButton) {
+  backButton.addEventListener("click", function() {
+    // code to navigate back to the previous page
+  });}
+
+startButton.addEventListener("click", function() {
+  // code to navigate to the start page
+});
