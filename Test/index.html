@@ -1,63 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles-Test.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class="header">
-    <p id="header-start">განათლება</p>
-    <p id="page-count">1/3</p>
-  </div>
-  <hr/>
-  <div class="page">
-    <div class="form-section">
-      <form id="experience-form">
-        <div class="form-group">
-          <label for="position">Position:</label>
-          <input type="text" id="position" name="position" required minlength="2">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles-Test.css" />
+    <link rel="stylesheet" href="styles2.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="half">
+        <div class="header">
+          <p class="header-start">გამოცდილება</p>
+          <p class="page-count">1/3</p>
         </div>
-        <div class="form-group">
-          <label for="employer">Employer:</label>
-          <input type="text" id="employer" name="employer" required minlength="2">
+        <hr />
+        <div class="form-section">
+          <form class="experience-form">
+            <div class="form-group">
+              <label for="position">თანამდებობა:</label>
+              <input
+                type="text"
+                class="position"
+                name="position"
+                placeholder="დეველოპერი.დიზაინერი ა.შ."
+                required
+                minlength="2"
+              />
+            </div>
+            <div class="form-group">
+              <label for="employer">დამსაქმებელი:</label>
+              <input
+                type="text"
+                class="employer"
+                name="employer"
+                placeholder="დამსაქმებელი"
+                required
+                minlength="2"
+              />
+            </div>
+            <div class="form-group">
+              <label for="start-date">დაწყების რიცხვი:</label>
+              <input type="date" class="start-date" name="start-date" required />
+            </div>
+            <div class="form-group">
+              <label for="graduation-date">დამთავრების რიცხვი:</label>
+              <input
+                type="date"
+                class="graduation-date"
+                name="graduation-date"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="description">აღწერა:</label>
+              <textarea
+                class="description"
+                name="description"
+                placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"
+                required
+              ></textarea>
+            </div>
+            <hr>
+            <div class="form-section">
+              <form class="experience-form">
+                <!-- form fields -->
+              </form>
+              <button class="add-another">მეტი გამოცდილები დამატება</button>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
         </div>
-        <div class="form-group">
-          <label for="start-date">Start Date:</label>
-          <input type="date" id="start-date" name="start-date" required>
+      </div>
+      <div class="half">
+        <div class="preview-section">
+          <p><span class="previewPosition"></span></p>
+          <p><span class="previewEmployer"></span></p>
+          <p><span class="previewStartDate"></span></p>
+          <p><span class="previewGraduationDate"></span></p>
+          <p><span class="previewDescription"></span></p>
         </div>
-        <div class="form-group">
-          <label for="graduation-date">Graduation Date:</label>
-          <input type="date" id="graduation-date" name="graduation-date" required>
-        </div>
-        <div class="form-group">
-          <label for="description">Description:</label>
-          <textarea id="description" name="description" required></textarea>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-      <div class="form-section">
-        <form id="experience-form">
-          <!-- form fields -->
-        </form>
-        <button id="add-another">Add Another</button>
       </div>
     </div>
-    <div class="preview-section">
-      <h3>Preview:</h3>
-      <p><strong>Position:</strong> <span id="previewPosition"></span></p>
-      <p><strong>Employer:</strong> <span id="previewEmployer"></span></p>
-      <p><strong>Start Date:</strong> <span id="previewStartDate"></span></p>
-      <p><strong>Graduation Date:</strong> <span id="previewGraduationDate"></span></p>
-      <p><strong>Description:</strong> <span id="previewDescription"></span></p>
-    </div>
-  </div>
-  
-  <button id="back-button">Back</button>
-  <button id="start-button">&lt; Start</button>
-  
-  <script src="script1.js"></script>
-</body>
+    <button class="back-button">უკან</button>
+    <button class="next-button">შემდეგი</button>
+
+    <script src="script1.js"></script>
+  </body>
 </html>

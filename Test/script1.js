@@ -1,16 +1,16 @@
-const experienceForm = document.getElementById("experience-form");
-const position = document.getElementById("position");
-const employer = document.getElementById("employer");
-const startDate = document.getElementById("start-date");
-const graduationDate = document.getElementById("graduation-date");
-const description = document.getElementById("description");
-const backButton = document.getElementById("back-button");
-const startButton = document.getElementById("start-button");
-const previewPosition = document.getElementById("previewPosition");
-const previewEmployer = document.getElementById("previewEmployer");
-const previewStartDate = document.getElementById("previewStartDate");
-const previewGraduationDate = document.getElementById("previewGraduationDate");
-const previewDescription = document.getElementById("previewDescription");
+const experienceForm = document.querySelector(".experience-form");
+const position = document.querySelector(".position");
+const employer = document.querySelector(".employer");
+const startDate = document.querySelector(".start-date");
+const graduationDate = document.querySelector(".graduation-date");
+const description = document.querySelector(".description");
+const backButton = document.querySelector(".back-button");
+const nextButton = document.querySelector(".next-button");
+const previewPosition = document.querySelector(".previewPosition");
+const previewEmployer = document.querySelector(".previewEmployer");
+const previewStartDate = document.querySelector(".previewStartDate");
+const previewGraduationDate = document.querySelector(".previewGraduationDate");
+const previewDescription = document.querySelector(".previewDescription");
 
 experienceForm.addEventListener("input", function() {
   previewPosition.textContent = position.value;
@@ -34,16 +34,17 @@ if (backButton) {
     // code to navigate back to the previous page
   });}
 
-startButton.addEventListener("click", function() {
+nextButton.addEventListener("click", function() {
   // code to navigate to the start page
 });
 
-const addAnotherButton = document.getElementById("add-another");
+const addAnotherButton = document.querySelector(".add-another");
 const formSection = document.querySelector(".form-section");
 
 addAnotherButton.addEventListener("click", function() {
   const formClone = experienceForm.cloneNode(true);
   formSection.appendChild(formClone);
+
 });
 
 
@@ -70,3 +71,7 @@ previewEmployer.textContent = experience.employer || "";
 previewStartDate.textContent = formatDate(experience.startDate) || "";
 previewGraduationDate.textContent = formatDate(experience.graduationDate) || "";
 previewDescription.textContent = experience.description || "";
+
+
+
+

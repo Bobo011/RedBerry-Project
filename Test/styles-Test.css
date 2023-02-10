@@ -53,6 +53,9 @@ button {
   cursor: pointer;
   margin-right: 20px;
 }
+#add-another{
+  background-color: #008CBA;
+}
 
 #back-button {
   background-color: #f44336;
