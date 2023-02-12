@@ -1,10 +1,10 @@
 //ინფორმაციის შეყვანა first-step-form
 function displayData() {
-    var name = document.getElementById("name").value;
-    var surname = document.getElementById("surname").value;
-    var aboutMe = document.getElementById("aboutMe").value;
-    var email = document.getElementById("email").value;
-    var phoneNumber = document.getElementById("phoneNumber").value;
+    var name = document.querySelector(".name").value;
+    var surname = document.querySelector(".surname").value;
+    var aboutMe = document.querySelector(".aboutMe").value;
+    var email = document.querySelector(".email").value;
+    var phoneNumber = document.querySelector(".phoneNumber").value;
   //ლოკალურ სტორიჯში ჩაწერა
     localStorage.setItem("name", name);
     localStorage.setItem("surname", surname);
@@ -12,7 +12,7 @@ function displayData() {
     localStorage.setItem("email", email);
     localStorage.setItem("phoneNumber", phoneNumber);
   
-    document.getElementById("display").innerHTML =
+    document.querySelector(".display").innerHTML =
       `<div id='name-surname'>${name} ${surname}</div><br><br>
         
         ${email}<br>
@@ -22,8 +22,8 @@ function displayData() {
         ${aboutMe}`;
   }
   //ნახატის ატვირთვა და გამოქვეყნება
-  const inputField = document.getElementById("image");
-  const outputImage = document.getElementById("output-image");
+  const inputField = document.querySelector(".image");
+  const outputImage = document.querySelector(".output-image");
   
   inputField.addEventListener("change", function() {
     const file = inputField.files[0];
@@ -50,25 +50,25 @@ function displayData() {
   // ლოკალური სტორიჯიდან ინფორმაციის ამოღება და ატვირთვა, ეს რეფრეშის დროს, ინფორმაციის 
   //დაკარგვისგან იცავს.
   window.onload = function() {
-    document.getElementById("name").value = localStorage.getItem("name");
-    document.getElementById("surname").value = localStorage.getItem("surname");
-    document.getElementById("aboutMe").value = localStorage.getItem("aboutMe");
-    document.getElementById("email").value = localStorage.getItem("email");
-    document.getElementById("phoneNumber").value = localStorage.getItem("phoneNumber");
-    document.getElementById("output-image").src = localStorage.getItem("image");
+    document.querySelector(".name").value = localStorage.getItem("name");
+    document.querySelector(".surname").value = localStorage.getItem("surname");
+    document.querySelector(".aboutMe").value = localStorage.getItem("aboutMe");
+    document.querySelector(".email").value = localStorage.getItem("email");
+    document.querySelector(".phoneNumber").value = localStorage.getItem("phoneNumber");
+    document.querySelector(".output-image").src = localStorage.getItem("image");
 
-    var name = document.getElementById("name");
-    var surname = document.getElementById("surname");
-    var aboutMe = document.getElementById("aboutMe");
-    var email = document.getElementById("email");
-    var phoneNumber = document.getElementById("phoneNumber");
+    var name = document.querySelector(".name");
+    var surname = document.querySelector(".surname");
+    var aboutMe = document.querySelector(".aboutMe");
+    var email = document.querySelector(".email");
+    var phoneNumber = document.querySelector(".phoneNumber");
     [name, surname, aboutMe, email, phoneNumber].forEach((el) => {
       el.addEventListener('change', () => { displayData() })
     })
 
     displayData()
 
-    const firstStepFrom = document.querySelector('#first-step-form')
+    const firstStepFrom = document.querySelector('.first-step-form')
     firstStepFrom.addEventListener('submit', (e) => submitFirstStepForm(e))
 
 

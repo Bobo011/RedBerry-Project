@@ -11,18 +11,18 @@
       <!-- //მარცხენა ნაწილი -->
       <div class="half">
         <div class="header">
-          <p id="header-start">პირადი ინფო</p>
-          <p id="page-count">1/3</p>
+          <p class="header-start">პირადი ინფო</p>
+          <p class="page-count">1/3</p>
         </div>
         <hr />
         <!-- ფორმის დასაწყისი -->
-        <form id="first-step-form">
+        <form class="first-step-form">
           <div class="field-1">
             <div>
               <label for="name">სახელი</label>
               <input
                 type="text"
-                id="name"
+                class="name"
                 name="name"
                 required
                 minlength="2"
@@ -35,7 +35,7 @@
               <label for="surname">გვარი</label>
               <input
                 type="text"
-                id="surname"
+                class="surname"
                 name="surname"
                 required
                 minlength="2"
@@ -45,14 +45,14 @@
               <p class="small">მინიმუმ 2 ასო. ქართული ასოები</p>
             </div>
           </div>
-          <div id="image-upload">
-            <label id="image-text" for="image">პირადი ფოტოს ატვირთვა</label>
-            <input type="file" id="image" name="image" required />
+          <div class="image-upload">
+            <label class="image-text" for="image">პირადი ფოტოს ატვირთვა</label>
+            <input type="file" class="image" name="image" required />
           </div>
           <div>
             <label for="aboutMe">ჩემს შესახებ(არასავალდებულო)</label>
             <textarea
-              id="aboutMe"
+            class="aboutMe"
               name="aboutMe"
               placeholder="ზოგადი ინფო შენ შესახებ"
             ></textarea>
@@ -61,7 +61,7 @@
             <label for="email">ელ.ფოსტა</label>
             <input
               type="email"
-              id="email"
+              class="email"
               name="email"
               required
               pattern="[a-zA-Z0-9._%+-]+@redberry\.ge"
@@ -73,7 +73,7 @@
             <label for="phoneNumber">მობილურის ნომერი</label>
             <input
               type="text"
-              id="phoneNumber"
+              class="phoneNumber"
               name="phoneNumber"
               required
               pattern="(\+995\d{9})"
@@ -83,7 +83,7 @@
               უნდა აკმაყოფილებდეს ქართული მობილური ნომრის ფორმატს
             </p>
           </div>
-          <div id="next">
+          <div class="next">
             <input type="submit" value="შემდეგი"/>
           </div>
         </form>
@@ -92,9 +92,9 @@
       <div class="half">
         <div class="display-container">
           <div class="input-data">
-            <p id="display"></p>
+            <p class="display"></p>
           </div>
-          <img id="output-image" alt="Uploaded Image">
+          <img class="output-image" alt="Uploaded Image">
         </div>
       </div>
     </div>

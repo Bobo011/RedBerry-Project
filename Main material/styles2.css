@@ -38,7 +38,7 @@
   box-sizing: border-box;
 }
 
-#header-start {
+.header-start {
   margin-left: 32px;
 }
 
@@ -46,7 +46,7 @@ hr {
   margin: 0 20px 0 40px;
 }
 
-#page-count {
+.page-count {
   margin-right: 15px;
 }
 
@@ -102,15 +102,15 @@ input[type="submit"] {
 }
 
 /* ეს ქმნის სურათის ატვირთვის ღილაკს */
-#image {
+.image {
   color: transparent;
 }
 
-#image::-webkit-file-upload-button {
+.image::-webkit-file-upload-button {
   visibility: hidden;
 }
 
-#image::before {
+.image::before {
   color: whitesmoke;
   content: 'ატვირთვა';
   display: inline-block;
@@ -125,19 +125,19 @@ input[type="submit"] {
   font-size: 10pt;
 }
 
-#image:hover::before {
+.image:hover::before {
   border-color: black;
 }
 
-#image:active::before {
+.image:active::before {
   background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
 
-#image-upload {
+.image-upload {
   display: flex;
 }
 
-#image-text {
+.image-text {
   margin-top: 11px;
 }
 
@@ -149,7 +149,7 @@ input[type="submit"] {
 }
 
 /* ეს შემდეგის კნოპკაა */
-#next {
+.next {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -160,7 +160,7 @@ input[type="submit"] {
 }
 
 /* ატვირთული ნახატი */
-#output-image {
+.output-image {
 
   border-radius: 50%;
   width: 250px;
@@ -183,7 +183,7 @@ input[type="submit"] {
 }
 
 /* ატვირთული ტექსტი */
-#name-surname{
+.name-surname{
   color: rgb(239, 139, 39);
   font-weight: bold;
   font-size: 25px;
