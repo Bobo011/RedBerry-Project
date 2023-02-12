@@ -4,6 +4,7 @@ const preview1 = document.querySelector(".preview1");
 const preview2 = document.querySelector(".preview2");
 const cloneButton = document.querySelector(".clone-button");
 const leftSide = document.querySelector(".left-side");
+const rightSide = document.querySelector(".right-side");
 const form1 = document.querySelector('.form-1')
 
 input1.addEventListener("input", function() {
@@ -24,8 +25,8 @@ cloneButton.addEventListener("click", function() {
     clonedPreview1.classList.add("preview1");
     clonedPreview2.classList.add("preview2");
     leftSide.appendChild(clonedForm);
-    leftSide.appendChild(clonedPreview1);
-    leftSide.appendChild(clonedPreview2);
+    rightSide.appendChild(clonedPreview1);
+    rightSide.appendChild(clonedPreview2);
 
     clonedInput1.addEventListener("input", function() {
         clonedPreview1.innerHTML = this.value;
