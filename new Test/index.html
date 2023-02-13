@@ -8,23 +8,11 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <div class="left-side">
-          <form class="form-1">
-            <label for="input1">Input 1:</label>
-            <input type="text" class="input1">
-            
-            <label for="input2">Input 2:</label>
-            <input type="text" class="input2">
-          </form>
-          <button class="clone-button">Clone Form</button>
-        </div>
-        <div class="right-side">
-          <p class="preview1"></p>
-          <p class="preview2"></p>
-        </div>
-      </div>
-      
+  <div class="input-container">
+    <input type="text" id="input-field" pattern="[a-zA-Z0-9]+">
+    <p class="error-message" id="pattern-message"></p>
+  </div>
+  
  
     <script src="script.js"></script>
 </body>

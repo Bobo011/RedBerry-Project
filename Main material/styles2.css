@@ -20,12 +20,18 @@
   height: 100vh;
 }
 
-.half {
-  width: 50%;
+.left-side {
   height: 100%;
-  border-right: 1px solid black;
-  padding: 6px 60px;
+  width: 50%;
+  background-color: #efefef;
+  padding: 20px;
+}
 
+.right-side {
+  height: 100%;
+  width: 50%;
+  background-color: #FFFFFF;
+  padding: 20px;
 }
 
 .header {
@@ -43,7 +49,9 @@
 }
 
 hr {
-  margin: 0 20px 0 40px;
+  
+  width: 104%;
+  background-color: #000000;
 }
 
 .page-count {
@@ -64,7 +72,7 @@ form {
 }
 
 label {
-
+  color: #000000;
   font-weight: bold;
   text-align: left;
   right: 2px;
@@ -78,10 +86,8 @@ input[type="text"], input[type="email"], textarea {
   padding: 10px;
   margin-bottom: 5px;
   background-color: white;
-  border-color: lightgray;
+  border-color: #BCBCBC;
   border-width: 1px;
-
-
 }
 
 
@@ -92,13 +98,23 @@ input[type="file"] {
 }
 
 input[type="submit"] {
-  width: 15%;
-  padding: 10px;
-  background-color: rgb(137, 10, 172);
-  color: white;
-  cursor: pointer;
-  border: none;
-  border-radius: 3px;
+
+  text-align: center;
+  position: absolute;
+  width: 151px;
+  height: 48px;
+  bottom: 65px;
+  color: #FFFFFF;
+  background: #6B40E3;
+  border-radius: 4px;
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
 }
 
 /* ეს ქმნის სურათის ატვირთვის ღილაკს */
@@ -162,9 +178,11 @@ input[type="submit"] {
 /* ატვირთული ნახატი */
 .output-image {
 
-  border-radius: 50%;
-  width: 250px;
-  height: 250px;
+  left: 501px;
+  top: 48px;
+  border-radius: 133px;
+  width: 246px;
+  height: 246px;
 
 }
 
@@ -183,8 +201,170 @@ input[type="submit"] {
 }
 
 /* ატვირთული ტექსტი */
-.name-surname{
-  color: rgb(239, 139, 39);
+.name-surname {
+  color: #F93B1D;
   font-weight: bold;
   font-size: 25px;
+}
+
+
+/* font aewsome icons */
+.fa-phone, .fa-at {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.fa-triangle-exclamation {
+  position: absolute;
+  left: 288px;
+  top: 101px;
+
+  color: #F02424;
+}
+
+.about-me {
+  color: #F93B1D;
+}
+
+.fa-chevron-left {
+  position: absolute;
+  width: 9.21px;
+  height: 16px;
+  left: 16px;
+  top: 14px;
+}
+
+.fa-circle-check {
+  background-color: #98E37E;
+  position: absolute;
+  left: 256px;
+  top: 101px;
+}
+
+.fa-circle-xmark{
+  position: absolute;
+  scale: 2;
+  width: 42px;
+  right: 582px;
+  height: 42px;
+  bottom: 1px;
+  color: #F93B1D;
+}
+
+/* უკან გადასვლა */
+.back {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 8px;
+  top: 5px;
+  border-radius: 50%;
+
+}
+
+/* თარიღების კრებული */
+.dates-labels{
+  display: flex;
+  justify-content: space-between;
+}
+.dates{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.graduation-date,.start-date{
+width: 240px;
+height: 28px;
+padding-left: 5px;
+}
+.graduation-date-label{
+  margin-right: 76px;
+}
+/* ................... */
+
+.page {
+  display: flex;
+  width: 100%;
+}
+
+.form-section, .preview-section {
+  width: 95%;
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+
+
+
+/* კნოპკები */
+button {
+  padding: 10px 20px;
+
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.add-another {
+  margin-top: 20px;
+  background-color: #008CBA;
+}
+
+.back-button {
+  background-color: #6B40E3;
+position: absolute;
+left: 79px;
+bottom: 65px;
+
+font-family: 'Helvetica Neue';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+letter-spacing: 0.08em;
+color: #FFFFFF;
+}
+
+.start-button {
+  background-color: #008CBA;
+}
+
+.backToStart-button:hover {
+  cursor: pointer;
+}
+
+.submit {
+  background-color: #4CAF50;
+}
+
+.next-button {
+  position: absolute;
+  bottom: 65px;
+  left: 770px;
+  font-family: 'Helvetica Neue';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+letter-spacing: 0.08em;
+
+color: #FFFFFF;
+
+  background-color: #6B40E3;
 }

@@ -1,2 +1,108 @@
 
-  
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redberry</title>
+    <link rel="stylesheet" type="text/css" href="styles2.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <meta name="viewport" content="width=1920, height=1080" />
+  </head>
+  <body>
+    <div class="back">
+      <a href="index.html">
+      <button class="backToStart-button" ><i class="fa-solid fa-chevron-left"></i></button>
+    </a>
+    </div>
+    <div class="container">
+      <!-- //მარცხენა ნაწილი -->
+      <div class="left-side">
+        
+        <div class="header">
+          <p class="header-start">გამოცდილება</p>
+          <p class="page-count">2/3</p>
+        </div>
+        <hr />
+        <!-- ფორმის დასაწყისი -->
+        <div class="form-section">
+            <form class="experience-form">
+              <div class="form-group">
+                <label for="position">თანამდებობა:</label>
+                <input
+                  type="text"
+                  class="position"
+                  name="position"
+                  placeholder="დეველოპერი.დიზაინერი ა.შ."
+                  required
+                  minlength="2"
+                />
+              </div>
+              <div class="form-group">
+                <label for="employer">დამსაქმებელი:</label>
+                <input
+                  type="text"
+                  class="employer"
+                  name="employer"
+                  placeholder="დამსაქმებელი"
+                  required
+                  minlength="2"
+                />
+              </div>
+              <div class="form-group">
+                <div class="dates-labels">
+                <label for="start-date">დაწყების რიცხვი:</label>
+                <label class="graduation-date-label" for="graduation-date">დამთავრების რიცხვი:</label>
+            </div>
+                <div class="dates">
+                
+                <input type="date" class="start-date" name="start-date" required />
+
+                
+                <input
+                  type="date"
+                  class="graduation-date"
+                  name="graduation-date"
+                  required
+                />
+            </div>
+              </div>
+              <div class="form-group">
+                <label for="description">აღწერა:</label>
+                <textarea
+                  class="description"
+                  name="description"
+                  placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"
+                  required
+                ></textarea>
+              </div>
+              <hr>
+             
+            <button class="add-another">მეტი გამოცდილები დამატება</button>
+              
+           
+            </form>
+            
+          </div>
+          <button class="back-button">უკან</button>
+          <button class="next-button">შემდეგი</button>
+        </div>
+       
+      <!-- მარჯვენა ნაწილი -->
+      <div class="right-side">
+        <div class="preview-section">
+            <p><span class="previewPosition"></span></p>
+            <p><span class="previewEmployer"></span></p>
+            <p><span class="previewStartDate"></span></p>
+            <p><span class="previewGraduationDate"></span></p>
+            <p><span class="previewDescription"></span></p>
+          </div>
+
+      
+          <i class="fa-solid fa-circle-xmark"></i>
+      </div>
+    </div>
+</div>
+    <script src="script2.js"></script>
+  </body>
+</html>

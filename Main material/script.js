@@ -13,11 +13,11 @@ function displayData() {
     localStorage.setItem("phoneNumber", phoneNumber);
   
     document.querySelector(".display").innerHTML =
-      `<div id='name-surname'>${name} ${surname}</div><br><br>
+      `<div class='name-surname'>${name} ${surname}</div><br><br>
         
-        ${email}<br>
-        ${phoneNumber}<br><br>
-        <b>ჩემს შესახებ</b> <br> <br>
+       <i class="fa-solid fa-at"></i>${email}<br>
+       <i class="fa-sharp fa-solid fa-phone"></i>${phoneNumber}<br><br>
+        <p class='about-me'><b>ჩემს შესახებ</b></p> <br> <br>
         
         ${aboutMe}`;
   }
@@ -79,7 +79,7 @@ function displayData() {
         let file = new File([imgBlob], fileName,{type:"image/jpeg", lastModified:new Date().getTime()}, 'utf-8');
         let container = new DataTransfer(); 
         container.items.add(file);
-        document.querySelector('#image').files = container.files;
+        document.querySelector('.image').files = container.files;
         
       })
     }
@@ -97,4 +97,32 @@ function displayData() {
     loadURLToInputFiled(localStorage.getItem("image"))
     
   };
-  
+  // აქ იმოწმება პირობები
+const nameInput = document.querySelector('.name');
+const surnameInput = document.querySelector('.surname')
+const emailInput = document.querySelector('.email')
+const phoneNumberInput = document.querySelector('.phoneNumber')
+const messageName=document.querySelector('.message-name')
+const messageSurname=document.querySelector('.message-surname')
+const messageEmail=document.querySelector('.message-email')
+const messagePhoneNumber=document.querySelector('.message-phoneNumber')
+
+function checkValidity(iname, message){
+  iname.addEventListener("input", function() {
+        if (!this.validity.valid) {
+          message.innerHTML = `<i class="fa-sharp fa-solid fa-triangle-exclamation"></i>`;
+          message.style.display = "block";
+        this.style.borderColor = "red";
+      } else {
+        message.innerHTML = `<i class="fa-sharp fa-regular fa-circle-check"></i>`;
+         this.style.borderColor = "green";
+        }
+       }); 
+}
+
+checkValidity(nameInput, messageName);
+checkValidity(surnameInput, messageSurname);
+checkValidity(emailInput, messageEmail);
+checkValidity(phoneNumberInput, messagePhoneNumber);
+
+

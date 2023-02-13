@@ -2,14 +2,21 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>My Resume</title>
+    <title>Redberry</title>
     <link rel="stylesheet" type="text/css" href="styles2.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
     <meta name="viewport" content="width=1920, height=1080" />
   </head>
   <body>
+    <div class="back">
+      <a href="index.html">
+      <button class="backToStart-button" ><i class="fa-solid fa-chevron-left"></i></button>
+    </a>
+    </div>
     <div class="container">
       <!-- //მარცხენა ნაწილი -->
-      <div class="half">
+      <div class="left-side">
         
         <div class="header">
           <p class="header-start">პირადი ინფო</p>
@@ -30,6 +37,7 @@
                 pattern="[ა-ჰ]+"
                 placeholder="ანზორ"
               />
+              <p class="message-name"></p>
               <p class="small">მინიმუმ 2 ასო. ქართული ასოები</p>
             </div>
             <div>
@@ -43,6 +51,7 @@
                 pattern="[ა-ჰ]+"
                 placeholder="მუმლაძე"
               />
+              <p class="message-surname"></p>
               <p class="small">მინიმუმ 2 ასო. ქართული ასოები</p>
             </div>
           </div>
@@ -68,6 +77,7 @@
               pattern="[a-zA-Z0-9._%+-]+@redberry\.ge"
               placeholder="anzor123@redberry.ge"
             />
+            <p class="message-email"></p>
             <p class="small">უნდა მთავრდებოდეს redberry.ge-ითი</p>
           </div>
           <div>
@@ -80,17 +90,20 @@
               pattern="(\+995\d{9})"
               placeholder="+995 551 12 34"
             />
+            <p class="message-phoneNumber"></p>
             <p class="small">
               უნდა აკმაყოფილებდეს ქართული მობილური ნომრის ფორმატს
             </p>
           </div>
           <div class="next">
+            <a href="secondStepPage.html">
             <input type="submit" value="შემდეგი"/>
+          </a>
           </div>
         </form>
       </div>
       <!-- მარჯვენა ნაწილი -->
-      <div class="half">
+      <div class="right-side">
         <div class="display-container">
           <div class="input-data">
             <p class="display"></p>
