@@ -38,18 +38,26 @@ cloneButton.addEventListener("click", function () {
   const clonedPositionPreview = document.createElement("p");
   const clonedEmployer = clonedForm.querySelector(".employer");
   const clonedEmployerPreview = document.createElement("p");
-  const clonedStartDate = clonedForm.querySelector(".startDate");
+  const clonedStartDate = clonedForm.querySelector(".start-date");
   const clonedStartDatePreview = document.createElement("p");
-  const clonedGraduationDate = clonedForm.querySelector(".graduationDate");
+  const clonedGraduationDate = clonedForm.querySelector(".graduation-date");
   const clonedGraduationDatePreview = document.createElement("p");
   const clonedDescription = clonedForm.querySelector(".description");
   const clonedDescriptionPreview = document.createElement("p");
+  const rightHalf = document.querySelector('.preview-section')
+  
 
   clonedPositionPreview.classList.add("previewPosition");
   clonedEmployerPreview.classList.add("previewEmployer");
   clonedStartDatePreview.classList.add("previewStartDate");
   clonedGraduationDatePreview.classList.add("previewGraduationDate");
   clonedDescriptionPreview.classList.add("previewDescription");
+  formSection.appendChild(clonedForm);
+  rightHalf.appendChild(clonedPositionPreview);
+  rightHalf.appendChild(clonedEmployerPreview);
+  rightHalf.appendChild(clonedStartDatePreview);
+  rightHalf.appendChild(clonedGraduationDatePreview);
+  rightHalf.appendChild(clonedDescriptionPreview);
 
   clonedPosition.addEventListener("input", function () {
     clonedPositionPreview.innerHTML = this.value;
@@ -60,11 +68,11 @@ cloneButton.addEventListener("click", function () {
   });
 
   clonedStartDate.addEventListener("input", function () {
-    clonedStartDatePreview.innerHTML = this.value;
+    clonedStartDatePreview.innerHTML = formatDate(this.value);
   });
 
   clonedGraduationDate.addEventListener("input", function () {
-    clonedGraduationDatePreview.innerHTML = this.value;
+    clonedGraduationDatePreview.innerHTML = formatDate(this.value);
   });
 
   clonedDescription.addEventListener("input", function () {
@@ -72,17 +80,16 @@ cloneButton.addEventListener("click", function () {
   });
 });
 
-
-
-
-
-
-
-
+//clones the form
+const addAnotherButton = document.querySelector(".add-another");
+const formSection = document.querySelector(".form-section");
 
 //local Storage
 experienceForm.addEventListener("submit", function (event) {
   event.preventDefault();
+
+  // Generate a unique key for each form submit
+  const key = `experience-${new Date().getTime()}`;
 
   const experience = {
     position: position.value,
@@ -92,7 +99,7 @@ experienceForm.addEventListener("submit", function (event) {
     description: description.value,
   };
 
-  localStorage.setItem("experience", JSON.stringify(experience));
+  localStorage.setItem(key, JSON.stringify(experience));
 });
 
 const storedExperience = localStorage.getItem("experience");
@@ -119,21 +126,3 @@ function formatDate(date) {
   const options = { year: "numeric", month: "long", day: "numeric" };
   return dateObject.toLocaleDateString("en-US", options);
 }
-
-// experienceForm.addEventListener("input", function() {
-//   previewPosition.textContent = position.value;
-//   previewEmployer.textContent = employer.value;
-//   previewStartDate.textContent = formatDate(startDate.value);
-//   previewGraduationDate.textContent = formatDate(graduationDate.value);
-//   previewDescription.textContent = description.value;
-
-// });
-
-// const addAnotherButton = document.querySelector(".add-another");
-// const formSection = document.querySelector(".form-section");
-
-// addAnotherButton.addEventListener("click", function() {
-//   const formClone = experienceForm.cloneNode(true);
-//   formSection.appendChild(formClone);
-
-// });
